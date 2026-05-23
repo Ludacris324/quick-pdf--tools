@@ -27,9 +27,13 @@ require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelpe
 flutter_ios_podfile_setup
 
 target 'Runner' do
-  use_frameworks!
+  # Static frameworks — stable with Google Mobile Ads + Flutter plugins (CocoaPods only, no SPM).
+  use_frameworks! :linkage => :static
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+
+  # Ensure AdMob's CocoaPods dependency resolves when SPM is off (see googleads-mobile-flutter#1224).
+  pod 'webview_flutter_wkwebview', :path => '.symlinks/plugins/webview_flutter_wkwebview/darwin'
 
   target 'RunnerTests' do
     inherit! :search_paths

@@ -34,3 +34,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # CocoaPods only — avoids google_mobile_ads vs webview_flutter_wkwebview SPM conflict on iOS.
+  config:
+    enable-swift-package-manager: false

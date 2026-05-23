@@ -48,6 +48,16 @@ flutter pub get
 cd ios && pod install
 ```
 
+### تعارض SPM (google_mobile_ads + webview)
+
+المشروع يعطّل Swift Package Manager ويعتمد على CocoaPods فقط:
+
+```bash
+flutter config --no-enable-swift-package-manager
+```
+
+أو من `pubspec.yaml` → `flutter.config.enable-swift-package-manager: false` (مفعّل في هذا المشروع).
+
 ## 4) تفعيل إعلانات الإنتاج
 
 في `lib/core/ads/ad_config.dart`:
