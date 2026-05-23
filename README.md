@@ -13,7 +13,7 @@
 
 - Flutter 3.24+ / Dart 3.5+
 - Android: `minSdk 24` (ML Kit)
-- iOS 13+
+- iOS 15.5+ (مطلوب لـ ML Kit)
 
 ## التشغيل
 
