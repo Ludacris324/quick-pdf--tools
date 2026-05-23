@@ -1,0 +1,16 @@
+name: file_compression_plus
+description: Dart-only PDF/image compression (local fix for broken pub.dev plugin metadata).
+version: 0.0.5
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_image_compress: ^2.4.0
+  syncfusion_flutter_pdf: ^28.2.12
+  path: ^1.9.1
+  path_provider: ^2.1.5
